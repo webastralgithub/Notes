@@ -1,0 +1,125 @@
+.goal-heading {
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 30px;
+    color: #0B394E;
+    margin-top: 25px;
+}
+.input-head{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+.goal-btn {
+    background: #0B394E;
+    border-radius: 6px;
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 13px;
+    line-height: 20px;
+    color: #FFFFFF;
+    border: none;
+    padding: 8px 60px;
+    height: 35px;
+    flex-basis: 200px;
+}
+.input-head input{
+    border: 1px solid #A9A9A9;
+    border-radius: 6px;
+    height: 35px;
+    flex-basis: 100%;
+}
+.input-head select{
+    flex-basis: 100%;
+    appearance: auto;
+    border: 1px solid #A9A9A9;
+    font-size: 13px !important;
+    color: #000;
+    font-family: poppins;
+}
+.first-input{
+    border-bottom: 1px solid #A9A9A9;
+    padding-bottom: 30px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 9fr 5fr;
+    align-items: center;
+}
+.goal-span{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 600;
+font-size: 16.26px;
+line-height: 20px;
+color: #000000;
+}
+.btn-save{
+    background: #FF4F5A;
+}
+button.goal-btn.btn-save img {
+    width: 13px;
+}
+button.goal-btn.btn-save {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.goals-wrapper{
+    display:flex; 
+    gap:24px;
+    margin-top:20px;
+  }
+/* responsive **************************************************************************************************** */
+@media(max-width:992px){
+    .first-input {
+        margin-top: 30px;
+        display: flex;
+        gap: 10px;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    .goal-span {
+        width: 100%;
+    }
+    .input-head input {
+        flex-basis: auto;
+        width: 100%;
+        margin: 10px 0px;
+    }
+    button.goal-btn {
+        width: 100%;
+        flex-basis: auto;
+        padding: 8px;
+    }
+    button.goal-btn.btn-save {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        padding: 8px;
+        justify-content: center;
+    }
+    .input-head select {
+        flex-basis: auto;
+        appearance: auto;
+        width: 100%;
+        margin: 10px 0px;
+       
+    }
+}
+@media(max-width:576px){
+    .goals-wrapper{
+        flex-direction: column;
+        margin-bottom: 20px;
+      }
+      .goals-wrapper div {
+        width: 100% !important;
+        display: block !important;
+        text-align: center;
+    }
+
+}

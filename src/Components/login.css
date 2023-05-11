@@ -1,0 +1,273 @@
+.contain{
+
+    position: absolute;
+width: 762px;
+height: 446px;
+left: 374px;
+top: 153px;
+
+background: #FFFFFF;
+box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.13);
+border-radius: 25px;
+}
+
+
+/* .inp{
+   
+    width: 293px;
+    height: 29px;
+    left: 704px;
+    top: 327px;
+    border-top:0;
+    border-right:0;
+  
+    border-left:0;
+    
+
+} */
+.input-box {
+    border-bottom: 1px solid #C1C7D0;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding-bottom: 5px;
+}
+.input-box svg{
+    border-right: 1px solid #C1C7D0;
+    width: 10%;
+    font-size: 12px;
+}
+.input-box input{
+    border: none;
+    width:90%;
+    background: transparent;
+    font-size: 12px;
+}
+.password-section {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.password-section label{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 10px;
+line-height: 194.62%;
+color: #324A59;
+
+}
+.remember-block {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.forget {
+    display: flex;
+    align-items: center;
+}
+.login-btn{
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 17px;
+line-height: 21px;
+color: #FFFFFF;
+background: #FF4F5A !important;
+border-radius: 10px !important;
+line-height: 22px;
+width: 100%;
+border: none;
+padding: 12px ;
+}
+.sign-up-text{
+    font-family:'Inter';
+font-style: normal;
+font-weight: 400;
+font-size: 14px;
+line-height: 27px;
+color: #232323;
+}
+.login-modal h2 {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 600;
+    font-size: 36px;
+    line-height: 54px;
+    color: #181D2D;
+}
+.login-modal p {
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 27px;
+    color: #787878;
+}
+.signup-password div svg {
+    width: 100%;
+    border-right: none;
+    display: inline-block;
+}
+input.inp:focus-visible {
+    border: none;
+    outline: none;
+}
+.login-modal input.inp{
+border-radius: 0;
+}
+.password-section .text-right, .password-section .text-right a {
+    font-family: 'Inter';
+font-style: normal;
+font-weight: 500;
+font-size: 10px;
+line-height: 194.62%;
+color: #324A59;
+text-decoration: none;
+}
+.sign-up-text a {
+    color: #FF4F5A;
+    text-decoration: none;
+}
+
+.upload-image {
+    display: flex;
+    gap: 5px;
+    margin-bottom: 10px;
+    flex-direction: column;
+    align-items: center;
+}
+.profile-pic-update-container input#profilePhoto {
+    display: none;
+}
+.profile-pic-update-container .form-label {
+    display: flex;
+    align-items: center;
+    background:#AAAAAA;
+    border-radius: 10px;
+    color: #fff;
+    padding: 6px 15px;
+    font-size: 12px;
+    gap: 5px;
+    justify-content: center;
+    cursor: pointer;
+}
+.profile-pic-update-container .form-label img {
+    width: 20px;
+    filter: invert(1);
+}
+.profile-pic-update-container input.btn{
+    font-size: 12px;
+    padding: 10px 20px;
+    line-height: 12px;
+    width: 100%;
+    background: #FF4F5A;
+    border: none;
+    border-radius: 10px;
+}
+.profile-pic-container {
+    width: 45%;
+    margin-bottom: 5px;
+}
+.login-link {
+    text-align: center;
+    margin-top: 10px;
+}
+.button-wrapper {
+    margin-top: 10px;
+}
+.profile-pic-update-container {
+    width: 100%;
+}
+.login-link a {
+    text-decoration: none;
+    color: #FF4F5A;
+}
+.profile-pic-update-container input.btn:active {
+    background: #FF4F5A;
+}
+.login-modal .modal-content {
+    padding: 20px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.13);
+    border-radius: 25px;
+}
+.login-wrapper{
+    padding: 20px 40px 20px 10px;
+}
+.signup-wrapper {
+    padding: 0px 40px 20px 30px;
+}
+.input-feilds-wrapper{
+    width: 70%;
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.image-wrapper{
+    width: 30%;
+}
+.input-feilds-wrapper .input-box {
+    width: 48%;
+}
+.mb-3.email-wrapper.input-box {
+    width: 100%;
+}
+.mb-3.email-wrapper.input-box svg {
+    width: 5%;
+}
+.login-inner{
+    display: flex;
+    gap: 20px;
+}
+.login-img-wrapper,
+.login-input-wrapper{
+    width: 50%;
+}
+.signup-inner-wrapper{
+    display:flex;
+    gap:24px;
+}
+/* responsive popuo************************************* */
+@media (max-width:576px){
+    .modal-dialog .modal-content {
+        margin: 0 20px;
+    }
+    .login-inner{
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .login-img-wrapper,
+login-input-wrapper{
+    width: 50%;
+}
+.login-img-wrapper {
+    display: none;
+}
+.login-wrapper {
+    padding: 10px 10px 10px 10px;
+}
+.input-feilds-wrapper .input-box {
+    width: 100%;
+}
+.input-feilds-wrapper {
+    width: 100%;
+}
+.signup-inner-wrapper {
+    gap: 0px;
+    flex-direction: column;
+}
+.image-wrapper {
+    width: 100%;
+}
+.upload-image {
+    margin-bottom: 10px;
+    flex-direction: row;
+    align-items: center;
+}
+.signup-wrapper {
+    padding: 0px 20px 10px 10px;
+}
+}
