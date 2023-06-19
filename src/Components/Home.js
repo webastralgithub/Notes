@@ -192,11 +192,132 @@ useEffect(() => {
         </div>
       </div>
 
-  
+      <div className="download-banner-outer">
+        <div className="container-fluid">
+          <div className="download-banner">
+            <div className="dounload-inner">
+              <h2>Download Our app</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's.
+              </p>
+              <div className="download-btn-head">
+                <button>
+                  <img src="/images/playstore.png" />
+                </button>
+                <button>
+                  <img src="/images/appstore.png" />
+                </button>
+              </div>
+            </div>
 
-    
-   
-     
+            <div className="dounload-inner-right">
+                  <img src="/images/app.png" />
+            </div>
+
+          </div>
+        </div>  
+      </div>
+
+      <div className="story-section">
+        <div className="container-fluid">
+          <div className="story-section">
+            <div className="story-head">
+              <p className="banner-grey-text">Who we are</p>
+              <h2 className="blue-heading">Our Story</h2>
+              <h4>
+                Notes For Therapy was created to help maximize your therapy
+                experience. Have you ever felt rushed going into a therapy session
+                and realized you didn’t know what you wanted to talk about?
+              </h4>
+            </div>
+            <div className="story-inner">
+              <div style={{ width: "50%" }}>
+                <img src="/images/our-story.png" alt="loading" />
+              </div>
+              <div style={{ width: "50%", alignSelf: "center" }}>
+                <ul className="list-head">
+                  <li>
+                    With this app, you can add notes about relevant topics
+                    throughout the week (or longer, if your therapy appointments
+                    aren’t weekly). With this tool, you can feel clear and prepared
+                    going into your therapy sessions!
+                  </li>
+                  <li>
+                    Once you click on the therapy option (Individual, Couples or
+                    Other), you have the option to write journal entries, notes for
+                    specific therapy sessions, information on your goals, and
+                    entering your sessions on a calendar so that you can track.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>  
+        </div>
+      </div>
+
+      <div className="testinomials">
+        <div className="container-fluid">
+          <div className="testimonial_head">
+          <h3>MY CLIENTS</h3>
+          <h2>Testimonials</h2>
+          <Carousel >
+          {reviews.reduce(reduceReviews, []).map((review, index) => (
+
+            <Carousel.Item key={index}>
+            <div className="d-flex justify-content-center" style={{gap:"50px"}}>
+              {review.map((item, index) => {
+                return (
+                  <Card key={index} style={{ width: "25rem" }}>
+                    <Card.Img variant="top" src={item.image} />
+                    <Card.Body>
+                     
+                      
+                <h6>{item.content} rggjsidpg  cxefka edgkdld gegdolgdol jpkk</h6>
+                <h4>-{item.author}</h4>
+                    </Card.Body>
+                  </Card>
+                );
+              })}
+            </div>
+          </Carousel.Item>
+        ))}
+      </Carousel>
+
+           
+          </div>
+        </div>  
+      </div>
+
+      <div className="subscriptions">
+        <div className="container-fluid">
+          <div className="subscriptions-cnt">
+            <div className="news-left">
+              <p>Mailing List</p>
+              <h2>Subscribe to our Newsletter</h2>
+            </div>
+            <div className="news-right">
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's.
+              </p>
+              <div className="news-input-head">
+                <input
+                  type="email"
+                  placeholder="Enter your email address"
+                ></input>
+                <Button>
+                  Subscribe
+                  <img
+                    style={{ width: "18px", marginLeft: "10px" }}
+                    src="/images/mail.svg"
+                  />
+                </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };

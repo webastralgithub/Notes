@@ -16,7 +16,15 @@ const [user,setUser]=useState(null)
       <p>Hey! , <span>{user.name}</span></p>
       </div>}
     <Link to="/therapy-notes" className="nav-item nav-link px-3">Therapy Notes<img src='/images/icons/Vector.svg'/></Link>
-   
+    <Link to="/goals" className="nav-item nav-link px-3">Goal<img src='/images/icons/Vector.svg'/></Link>
+    <Link to="/profile" className="nav-item nav-link px-3">Profile<img src='/images/icons/Vector.svg'/></Link>
+    <Link to="/Calendar" className="nav-item nav-link px-3">Calendar<img src='/images/icons/Vector.svg'/></Link>
+   <Link to="/symptom-tracking" className="nav-item nav-link px-3">Symptom-tracking<img src='/images/icons/Vector.svg'/></Link>
+ 
+   <Link to="/notes" className="nav-item nav-link px-3">Notes<img src='/images/icons/Vector.svg'/></Link>
+    <Link to="/chart" className="nav-item nav-link px-3">Symptom Graph<img src='/images/icons/Vector.svg'/></Link>
+    <Link to="/homework" className="nav-item nav-link px-3">Homework<img src='/images/icons/Vector.svg'/></Link>
+    <Link to="/tracking" className="nav-item nav-link px-3">Tracking<img src='/images/icons/Vector.svg'/></Link>
     </div>
   )
 }

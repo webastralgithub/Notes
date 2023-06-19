@@ -11,7 +11,7 @@ const Login = ({login,setLogin,isLoggedIn,setisLoggedIn}) => {
     const [passwordInput, setPasswordInput] = useState("");
   const [error, setError] = useState(null);
 const [obj,setObj]=useState({})
-const [image,setImage]=useState('')
+const [image,setImage]=useState('/images/download.png')
 useEffect(() => {
   // Good!
  
@@ -99,7 +99,7 @@ const signup= async(e)=>{
     }
     if(!error){
     var form_data = new FormData();
-var item={...obj,image:image}
+var item={...obj}
 for ( var key in item ) {
     form_data.append(key, item[key]);
 }try{
@@ -122,10 +122,26 @@ catch(error){
    
 }
 const onChangePhoto = async(e) => {
-  setImage(e.target.files[0])
+  const file = e.target.files[0];
+  const imageUrl = URL.createObjectURL(file);
+  setImage(imageUrl);
+ 
+
+    const reader = new FileReader();
+  
+    reader.onloadend = () => {
+      const binaryString = reader.result;
+      const imageFile = new File([binaryString], file.name, { type: file.type });
+      setObj({ ...obj, image: imageFile });
+    };
+  
+    if (file) {
+      reader.readAsArrayBuffer(file);
+    }
+    
 };
 
-
+console.log(image)
 
   return (
   <>
@@ -135,7 +151,7 @@ const onChangePhoto = async(e) => {
   <div className='login-inner'>
   
   <div className='login-img-wrapper'>
-  <img className='img-fluid' src='/images/login.png' />
+  <img className='img-fluid' src={image} />
     </div>
 
     <div className='login-input-wrapper'>
@@ -248,29 +264,18 @@ const onChangePhoto = async(e) => {
   </div>
   <div className="mb-3 input-box">
        
-       <FaMobile />  <input
-           type="phone"
-           className='inp'
-           name="phone_number"
-           placeholder="Mobile Number"
-           value={obj.phone_number}
-           onChange={handleChange}
-           
-         />
+  <FaEnvelope /> <input
+  type="email"
+ className='inp'
+  placeholder="Enter email"
+  name="email"
+  value={obj.email}
+  onChange={handleChange}
+  
+/>
          
          </div>
-  <div  className="mb-3 email-wrapper input-box">
-     
-    <FaEnvelope /> <input
-            type="email"
-           className='inp'
-            placeholder="Enter email"
-            name="email"
-            value={obj.email}
-            onChange={handleChange}
-            
-          />
-    </div>
+  
    
   
 
