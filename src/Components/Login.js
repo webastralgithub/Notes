@@ -63,6 +63,10 @@ try{
   const token = JSON.stringify(response.data.token);
   localStorage.setItem("token",token)
   localStorage.setItem("user_details",JSON.stringify(response.data.user_details))
+  if(response.data.promocode){
+    localStorage.setItem("promocode",JSON.stringify(response.data.promocode))
+  }
+
   if(token){
     navigate("/therapy-notes")
     setisLoggedIn(true)

@@ -2,6 +2,7 @@ import axios from 'axios'
 import React, { useState,useEffect,useLayoutEffect, useRef } from 'react'
 
 import { Col, Form } from "react-bootstrap";
+import { useNavigate } from 'react-router-dom';
 import MiniHeader from './MiniHeader'
 import "./symptom.css"
 const Symptom = () => {
@@ -10,7 +11,7 @@ const Symptom = () => {
     const[currentRating,setCurrentRating]=useState()
     const[symptomData,setSymptomData]=useState([])
     const goalref = useRef();
-
+ const navigate=useNavigate()
 let arr=[]
     for(let i=1;i<=10;i++){
       arr.push(i)
@@ -89,11 +90,16 @@ body.symptom_ids[currentSymptom[0].id]=sym.rating
 })
 console.log(body);
   const res = await axios.post(`${url}/symptom_tracking`,body,config);
+  console.log('res',res);
+  if (res.data.success){
+    console.log('hwrere');
+    navigate("/chart")
+  }
 }
   const saveSymptom=()=>{
-    if(val.length>0 && currentRating.length>0){
+    if(val?.length>0 && currentRating?.length>0){
     const newSymptomData=symptomData
-   for(let i=0;i<newSymptomData.length;i++)
+   for(let i=0;i<newSymptomData?.length;i++)
    {
      if( newSymptomData[i].symptom==val){
       newSymptomData[i].rating=currentRating
