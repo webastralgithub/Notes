@@ -142,6 +142,17 @@ to your Symptoms</h4>
 </div>
 </div>
 </div>
+<label>
+Enter Comment
+
+</label><input
+type="text"
+style={{width:'100%',height:"107px"}}
+name="currentpassword"
+
+
+
+/>
 <div style={{display:'flex'}} className="custom_symptom_form">
 <Form.Group as={Col} controlId="my_multiselect_field">
 <Form.Label>My Symptoms</Form.Label>

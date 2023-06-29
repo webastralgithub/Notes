@@ -139,12 +139,13 @@ useEffect(() => {
               <p className="banner-grey-text">Please Login and</p>
 
               <h3 className="blue-heading">
-                Start Making Notes Regarding your therapy
+                Start taking notes Regarding your therapy
               </h3>
               <p className="banner-para">
                 Notes For Therapy was created to help maximize your therapy
                 experience. Have you ever felt rushed going into a therapy session
-                and realized you didn’t know what you wanted to talk about?
+                and realized you didn’t know what you wanted to talk about?Notes For Therapy will keep all that
+                information at your fingertips!
               </p>
               <div className="btn-head">
                 <Button

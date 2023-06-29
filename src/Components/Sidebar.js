@@ -22,7 +22,7 @@ const [user,setUser]=useState(null)
    <Link to="/symptom-tracking" className="nav-item nav-link px-3">Symptom-tracking<img src='/images/icons/Vector.svg'/></Link>
  
    <Link to="/notes" className="nav-item nav-link px-3">Notes<img src='/images/icons/Vector.svg'/></Link>
-    <Link to="/chart" className="nav-item nav-link px-3">Symptom Graph<img src='/images/icons/Vector.svg'/></Link>
+    <Link to="/progress" className="nav-item nav-link px-3">Monitor your Progress<img src='/images/icons/Vector.svg'/></Link>
     <Link to="/homework" className="nav-item nav-link px-3">Homework<img src='/images/icons/Vector.svg'/></Link>
     <Link to="/tracking" className="nav-item nav-link px-3">Tracking<img src='/images/icons/Vector.svg'/></Link>
     <Link to="/coupon" className="nav-item nav-link px-3">Apply Coupon<img src='/images/icons/Vector.svg'/></Link>

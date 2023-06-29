@@ -2,6 +2,7 @@ import React,{useState,useLayoutEffect,useRef} from 'react'
 import { Editor } from 'react-draft-wysiwyg'
 
 import "./Projects.css"
+import Toaster from './Toaster'
 import TextEditor from './ProjectEdit';
 import MiniHeader from './MiniHeader';
 import { Button } from 'react-bootstrap';
@@ -17,7 +18,11 @@ const Projects = () => {
 
   const[goals,setGoals]=useState([])
   const[notes,setNotes]=useState()
+  const [toasterMessage, setToasterMessage] = useState('');
+
   const[notesText,setNotesText]=useState("")
+  const[id,setid]=useState(null)
+  const[track,setTrack]=useState(null)
   const[notesScreen,setNotesScreen]=useState(false)
   const [selected, setSelected] = useState();
   const[previous,setPrevious]=useState()
@@ -103,7 +108,8 @@ console.log(response.data.data)
     
        setTitle(from.title)
         setNotesText(from.description)
-        
+        setid(from.id)
+        setTrack(from.tracking.id)
    setText(from.tracking.description)
       setAchieved(from.tracking.goal_rating)
        setWeekly(from.tracking.weekly_rating)
@@ -167,10 +173,21 @@ console.log(body)
     const result = await axios.post(`${url}/tracking`,form_data2,config);
 console.log(result,"adffafad")
    }
+   const deletehandler= async()=>{
+     console.log("heeree")
+     const res = await axios.delete(`${url}/tracking/${track}`,config);
+    const rest = await axios.delete(`${url}/note/${id}`,config);
+    setToasterMessage('Deleted successfully');
+    setNotesScreen(false)
+    setTrack(null)
+    setid(null)
+    
+  }
  
   return (
     <div>
     <MiniHeader head='Therapy Notes' />
+    <Toaster message={toasterMessage} />
    {!notesScreen&& <div>
     
     <div className='search-filter'>
@@ -218,7 +235,7 @@ console.log(result,"adffafad")
 </form>
 <label>Title</label>
 <input value={title} onChange={(e)=>setTitle(e.target.value)} style={{width:'100%',height:"107px"}} type='text'></input>   
-<TextEditor setNotesText={setNotesText} notesText={notesText}/>
+
 <div>
       <h4 className='therepy-headings'>Select a Question to Write About</h4>
   <select
@@ -236,7 +253,7 @@ console.log(result,"adffafad")
     </select>
   <p className='therepy-headings'> Enter your text here* </p>
 
-    <input value={text} onChange={(e)=>setText(e.target.value)} style={{width:'100%',height:"107px"}} type='text'></input>   
+    <input value={notesText} onChange={(e)=>setNotesText(e.target.value)} style={{width:'100%',height:"107px"}} type='text'></input>   
     <p className='therepy-headings'>Weekly Rating</p>
     <p style={{color:"#585858"}}>Pick a number to rate your past week, with 10 being the best ever and 1 being the worst.</p>
     
@@ -289,13 +306,13 @@ console.log(result,"adffafad")
   ))}
 
   </div>
-  <button><img src="/images/del.png" alt="my image"  /></button>
+  <button onClick={deletehandler}><img src="/images/del.png" alt="my image"  /></button>
     <button onClick={submit}><img src="/images/save.png" alt="my image" /></button>
   </div>
   </div>
   </div>
 
-   <button className='custom_notes'><img src="/images/del.png" alt="my image"  /></button>
+   <button  className='custom_notes'><img src="/images/del.png" alt="my image"  /></button>
    <button className='custom_notes_save' onClick={submit}><img src="/images/save.png" alt="my image" /></button>
    </div>}
  </div>

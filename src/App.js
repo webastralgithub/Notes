@@ -68,7 +68,7 @@ console.log(detect)
         <Route path="/symptom-tracking" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Symptom /></div></Protected>}/>
         <Route path="/homework" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><HomeWork /></div></Protected>}/>
         <Route path="/notes" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Notes /></div></Protected>}/>
-        <Route path="/chart" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Chart /></div></Protected>}/>
+        <Route path="/progress" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Chart /></div></Protected>}/>
         <Route path="/coupon" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Coupon /></div></Protected>}/>
         <Route path="/tracking" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><NotesDisp /></div></Protected>}/>
         <Route path="/stripe" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Stripe /></div></Protected>}/>
