@@ -48,7 +48,7 @@ const getEvents=async () => {
   try {
     const data = await 
       axios.get(`${url}/event`,config)
-      console.log(data);
+
      const capitals = data.data.data?.map(function(obj) {
        
         obj['date'] = obj['day']; // Assign new key

@@ -34,7 +34,6 @@ const App=()=> {
   if (location.pathname === '/'||location.pathname === '/termsandconditions') {
     HomePageStyling = '';
 }
-console.log(detect)
 
 
   useEffect(() => {
@@ -67,10 +66,10 @@ console.log(detect)
         <Route path="/notification" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Notifications/></div></Protected>}/>
         <Route path="/symptom-tracking" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Symptom /></div></Protected>}/>
         <Route path="/homework" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><HomeWork /></div></Protected>}/>
-        <Route path="/notes" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Notes /></div></Protected>}/>
+      
         <Route path="/progress" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Chart /></div></Protected>}/>
         <Route path="/coupon" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Coupon /></div></Protected>}/>
-        <Route path="/tracking" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><NotesDisp /></div></Protected>}/>
+      
         <Route path="/stripe" element={<Protected isLoggedIn={isLoggedIn}><div className='main'><Stripe /></div></Protected>}/>
         <Route path="/termsandconditions" element={<div><TermsAndCondition /></div>}/>
 

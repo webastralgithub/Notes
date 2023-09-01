@@ -171,6 +171,17 @@ console.log(body)
     form_data2.append("note_id", res.data.data);
   
     const result = await axios.post(`${url}/tracking`,form_data2,config);
+    setToasterMessage('Added successfully');
+    setNotesScreen(false)
+    const response = await 
+    axios.get(`${url}/note`,config)
+console.log(response.data.data)
+  setNotes(
+ response.data.data
+  
+    );
+    setToasterMessage('Added successfully');
+    setNotesScreen(false)
 console.log(result,"adffafad")
    }
    const deletehandler= async()=>{

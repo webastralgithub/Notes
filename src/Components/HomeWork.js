@@ -130,7 +130,7 @@ for ( var key in data ) {
   <input className='short-input'  name="short_description"  defaultValue={data.short_description}  onChange={handleInput} style={{width:'100%'}} type='text'></input>
   </label>
   <label>Add File
-  <span><input name="file" type="file"    onChange={handleInput} type='file'></input></span>
+  <span><input name="file" type="file"    onChange={handleInput} ></input></span>
   </label>
    
    </div>

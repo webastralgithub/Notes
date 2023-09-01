@@ -157,12 +157,14 @@ to your Goals</h4>
 
 <button className='goal-btn' onClick={submit}>Add</button>
 </div>
+</div>
+</div>
 <label>
 Enter Comment
 
 </label><input
 type="text"
-className='inp'
+
 name="currentpassword"
 style={{width:'100%',height:"107px"}}
 
@@ -178,7 +180,7 @@ style={{width:'100%',height:"107px"}}
   <Form.Label>My Goals</Form.Label>
   <Form.Control as="select"  onChange={e => setVal(e.currentTarget.value)}>
   <option value="choose" disabled selected="selected">
-  
+  SElect a goal
   </option>
   {getCountry()}
   </Form.Control>
@@ -209,8 +211,8 @@ style={{width:'100%',height:"107px"}}
 {/* <button className='goal-btn btn-save' onClick={deleteGoal}><img src='\images\delete-icon.svg'/>Delete</button> */}
 </div></>}
 </div>
-</div>
-</div>
+
+
     </div>
   )
 }
